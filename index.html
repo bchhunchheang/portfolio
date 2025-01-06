@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bun Chhunchhieng Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            margin: 20px 0;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .project span {
+            font-weight: bold;
+        }
+        .project {
+            margin-bottom: 20px;
+        }
+        .project img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .project video {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        #video1 {
+            width: 45%;
+        }
+        #video2 {
+            width: 60%;
+        }
+        .project h3 {
+            margin-top: 10px;
+            font-size: 1.5em;
+        }
+        .project p {
+            margin: 5px 0;
+        }
+        .gallery {
+            column-count: 2;
+            column-gap: 30px;
+            margin-top: 30px;
+        }
+        .gallery img, .gallery video {
+            width: 100%;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover, .gallery video:hover {
+            transform: scale(1.03);
+        }
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .lightbox img, .lightbox video {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+        }
+        .lightbox .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const lightboxes = document.querySelectorAll('.lightbox');
+
+            lightboxes.forEach(lightbox => {
+                lightbox.addEventListener('click', (e) => {
+                    if (e.target === lightbox || e.target.classList.contains('close')) {
+                        lightbox.style.display = 'none';
+                    }
+                });
+            });
+
+            const galleryItems = document.querySelectorAll('.gallery a');
+
+            galleryItems.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = item.getAttribute('href').replace('#', '');
+                    const lightbox = document.getElementById(targetId);
+                    if (lightbox) {
+                        lightbox.style.display = 'flex';
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Bun Chhunchhieng Portfolio</h1>
+        <p>Graphic Designer | Video Editor | Creative Thinker</p>
+    </header>
+
+    <nav>
+        <a href="#projects">Projects</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#about">About Me</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <img src="image/artwork01.png" alt="Project 1">
+            <h3>Food Products Poster Design</h3>
+            <p>A poster introducing new arriving products for a client, created during my tenure at the marketing agency Master Guide Advisor.</p>
+            <p><span>Tools used:</span> Photoshop, Illustrator.</p>
+        </div>
+        <div class="project">
+            <img src="image/artwork5.jpg" alt="Project 1">
+            <h3>Moha Beong Trea Project under Creed Cambodia</h3>
+            <p>A Black-Friday promotion poster, created during my tenure at Creed Cambodia.</p>
+            <p><span>Tools used:</span> Photoshop, Illustrator.</p>
+        </div>
+        <div class="project">
+            <img src="image/artwork4.jpg" alt="Project 1">
+            <h3>Moha Beong Trea Project under Creed Cambodia</h3>
+            <p>A poster promotion, created during my tenure at Creed Cambodia.</p>
+            <p><span>Tools used:</span> Photoshop, Illustrator.</p>
+        </div>
+        <div class="project">
+            <img src="image/artwork6.jpg" alt="Project 1">
+            <h3>ARATA Project under Creed Cambodia</h3>
+            <p>A poster promotion, created during my tenure at Creed Cambodia.</p>
+            <p><span>Tools used:</span> Photoshop, Illustrator.</p>
+        </div>
+        <div class="project">
+            <img src="image/artwork7.jpg" alt="Project 1">
+            <h3>Event Announment Poster</h3>
+            <p>A poster for event announment, created during my tenure at Creed Cambodia.</p>
+            <p><span>Tools used:</span> Photoshop, Illustrator.</p>
+        </div>
+        <div class="project">
+            <img src="image/poster1.v22-01.jpg" alt="Project 2">
+            <h3>A Freeland Project</h3>
+            <p>A poster for a client specialized in Tax and Accounting.</p>
+            <p><span>Tools used:</span> Illustrator, Photoshop.</p>
+        </div>
+        <div class="project" id="video1">
+            <video controls autoplay muted loop>
+                <source src="video/video01.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h3>Promotional Video</h3>
+            <p>A promotional video created during my time at Mulberry House. The entire process, including voice-over, scriptwriting, and shooting, was done by me.</p>
+            <p><span>Tools used:</span> CapCut, Audacity.</p>
+        </div>
+        <div class="project">
+            <video controls autoplay muted loop>
+                <source src="video/video03.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h3>Motion Graphic</h3>
+            <p>A motion graphic video highlighting the specifications of a house, created during my tenure at Creed Cambodia.</p>
+            <p><span>Tools used:</span> Photoshop, AE.</p>
+        </div>
+        <div class="project" id="video2">
+            <video controls autoplay muted loop>
+                <source src="video/video07.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h3>Motion Graphic</h3>
+            <p>Another motion graphic video highlighting the specifications of a house, created during my tenure at Creed Cambodia.</p>
+            <p><span>Tools used:</span> Photoshop, AE.</p>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery">
+            <a href="#lightbox1"><video autoplay muted loop>
+                <source src="video/video02.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video></a>
+            <a href="#lightbox9"><img src="image/artwork25.jpg" alt="Gallery Image 4"></a>
+            <a href="#lightbox2"><img src="image/artwork1.jpg" alt="Gallery Image 1"></a>
+            <a href="#lightbox3"><img src="image/artwork38.jpg" alt="Gallery Image 2"></a>
+            <a href="#lightbox7"><video autoplay muted loop>
+                <source src="video/video06.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video></a>
+            <a href="#lightbox4"><img src="image/artwork31.jpg" alt="Gallery Image 3"></a>
+            <a href="#lightbox5"><img src="image/artwork33.jpg" alt="Gallery Image 4"></a>
+            <a href="#lightbox6"><video autoplay muted loop>
+                <source src="video/video08.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video></a>
+            <a href="#lightbox8"><video autoplay muted loop>
+                <source src="video/video13.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video></a>
+
+
+
+
+        </div>
+
+        <div id="lightbox1" class="lightbox">
+            <span class="close">&times;</span>
+            <video controls autoplay loop>
+                <source src="video/video02.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div id="lightbox2" class="lightbox">
+            <span class="close">&times;</span>
+            <img src="image/artwork1.jpg" alt="Gallery Image 1">
+        </div>
+        <div id="lightbox3" class="lightbox">
+            <span class="close">&times;</span>
+            <img src="image/artwork38.jpg" alt="Gallery Image 2">
+        </div>
+        <div id="lightbox4" class="lightbox">
+            <span class="close">&times;</span>
+            <img src="image/artwork31.jpg" alt="Gallery Image 3">
+        </div>
+        <div id="lightbox5" class="lightbox">
+            <span class="close">&times;</span>
+            <img src="image/artwork33.jpg" alt="Gallery Image 4">
+        </div>
+        <div id="lightbox6" class="lightbox">
+            <span class="close">&times;</span>
+            <video controls autoplay loop>
+                <source src="video/video08.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div id="lightbox7" class="lightbox">
+            <span class="close">&times;</span>
+            <video controls autoplay loop>
+                <source src="video/video06.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div id="lightbox8" class="lightbox">
+            <span class="close">&times;</span>
+            <video controls autoplay loop>
+                <source src="video/video13.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div id="lightbox9" class="lightbox">
+            <span class="close">&times;</span>
+            <img src="image/artwork25.jpg" alt="Gallery Image 4">
+        </div>
+
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a passionate Graphic Designer with over 5 years of experience. My work focuses on creating impactful designs for various industries, including cosmetics and retail.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:bchhunchhieng@gmail.com">bchhunchhieng@gmail.com</a></p>
+        <p>Phone: 096 888 0907</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Bun Chhunchhieng. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
