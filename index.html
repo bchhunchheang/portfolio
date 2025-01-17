@@ -40,17 +40,29 @@
         .project span {
             font-weight: bold;
         }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
         .project {
             margin-bottom: 20px;
         }
         .project img {
-            width: 100%;
+            width: 40%;
+            margin-top: 10px;
             border-radius: 8px;
+            margin-left: 30px;
         }
 
         .project video {
             width: 100%;
             border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        #video0 {
+            width: 60%;
         }
 
         #video1 {
@@ -64,7 +76,7 @@
             font-size: 1.5em;
         }
         .project p {
-            margin: 5px 0;
+            margin: 5px 0 5px 0;
         }
         .gallery {
             column-count: 2;
@@ -152,70 +164,81 @@
         <a href="#projects">Projects</a>
         <a href="#gallery">Gallery</a>
         <a href="#about">About Me</a>
-        <a href="#contact">Contact</a>
+        <!-- <a href="#contact">Contact</a> 
+        <a href="#contact">Contact</a>-->
     </nav>
-
+    <div class="container">
     <section id="projects">
         <h2>Projects</h2>
+        <!--place herizontal line here-->
+        <hr>
         <div class="project">
+            <h3>Food Poster Design</h3>
+            <p>Poster design during my tenure with MG (Marketing agency).</p>
+            <p><span>Tools used:</span> Photoshop, Illustrator.</p>
             <img src="image/artwork01.png" alt="Project 1">
-            <h3>Food Products Poster Design</h3>
-            <p>A poster introducing new arriving products for a client, created during my tenure at the marketing agency Master Guide Advisor.</p>
-            <p><span>Tools used:</span> Photoshop, Illustrator.</p>
+            <img src="image/artwork22.png" alt="Project 1">
         </div>
+
         <div class="project">
+            <h3>Real Estate Design</h3>
+            <p>My design during my tenure with Maha Beong Trea and ARATA under Creed Cambodia</p>
+            <p><span>Tools used:</span> Photoshop, Illustrator.</p>
             <img src="image/artwork5.jpg" alt="Project 1">
-            <h3>Moha Beong Trea Project under Creed Cambodia</h3>
-            <p>A Black-Friday promotion poster, created during my tenure at Creed Cambodia.</p>
-            <p><span>Tools used:</span> Photoshop, Illustrator.</p>
-        </div>
-        <div class="project">
             <img src="image/artwork4.jpg" alt="Project 1">
-            <h3>Moha Beong Trea Project under Creed Cambodia</h3>
-            <p>A poster promotion, created during my tenure at Creed Cambodia.</p>
-            <p><span>Tools used:</span> Photoshop, Illustrator.</p>
-        </div>
-        <div class="project">
             <img src="image/artwork6.jpg" alt="Project 1">
-            <h3>ARATA Project under Creed Cambodia</h3>
-            <p>A poster promotion, created during my tenure at Creed Cambodia.</p>
-            <p><span>Tools used:</span> Photoshop, Illustrator.</p>
+            <img src="image/artwork50.jpg" alt="Project 1">
         </div>
+
+
         <div class="project">
-            <img src="image/artwork7.jpg" alt="Project 1">
-            <h3>Event Announment Poster</h3>
-            <p>A poster for event announment, created during my tenure at Creed Cambodia.</p>
+            <h3>Cosmetics Design</h3>
+            <p>My design during my tenure with MG (Marketing agency).</p>
             <p><span>Tools used:</span> Photoshop, Illustrator.</p>
+            <img src="image/artwork31.jpg" alt="Project 1">
+            <img src="image/artwork34.jpg" alt="Project 1">
+            <img src="image/artwork25.jpg" alt="Project 1">
         </div>
-        <div class="project" id="video1">
-            <video controls autoplay muted loop>
-                <source src="video/video01.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <h3>Promotional Video</h3>
-            <p>A promotional video created during my time at Mulberry House. The entire process, including voice-over, scriptwriting, and shooting, was done by me.</p>
-            <p><span>Tools used:</span> CapCut, Audacity.</p>
-        </div>
+
         <div class="project">
+            <h3>Motion Graphic</h3>
+            <p>A motion graphic video highlighting the specifications of a house, created during my tenure at Creed Cambodia.</p>
+            <p><span>Tools used:</span> Photoshop, AE.</p>
             <video controls autoplay muted loop>
                 <source src="video/video03.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
+        </div>
+        <div class="project" id="video0">
             <h3>Motion Graphic</h3>
             <p>A motion graphic video highlighting the specifications of a house, created during my tenure at Creed Cambodia.</p>
             <p><span>Tools used:</span> Photoshop, AE.</p>
+            <video controls autoplay muted loop>
+                <source src="video/video08.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
+
         <div class="project" id="video2">
+            <h3>Motion Graphic</h3>
+            <p>Another motion graphic video highlighting the specifications of a house, created during my tenure at Creed Cambodia.</p>
+            <p><span>Tools used:</span> Photoshop, AE.</p>
             <video controls autoplay muted loop>
                 <source src="video/video07.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-            <h3>Motion Graphic</h3>
-            <p>Another motion graphic video highlighting the specifications of a house, created during my tenure at Creed Cambodia.</p>
-            <p><span>Tools used:</span> Photoshop, AE.</p>
+        </div>
+        <div class="project" id="video1">
+            <h3>Promotional Video</h3>
+            <p>A promotional video created during my time at Mulberry House. The entire process, including voice-over, scriptwriting, and shooting, was done by me.</p>
+            <p><span>Tools used:</span> CapCut, Audacity.</p>
+            <video controls autoplay muted loop>
+                <source src="video/video01.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
     </section>
-
+    </div>
     <section id="gallery">
         <h2>Gallery</h2>
         <div class="gallery">
@@ -223,26 +246,18 @@
                 <source src="video/video02.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video></a>
-            <a href="#lightbox9"><img src="image/artwork25.jpg" alt="Gallery Image 4"></a>
             <a href="#lightbox2"><img src="image/artwork1.jpg" alt="Gallery Image 1"></a>
             <a href="#lightbox3"><img src="image/artwork38.jpg" alt="Gallery Image 2"></a>
             <a href="#lightbox7"><video autoplay muted loop>
                 <source src="video/video06.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video></a>
-            <a href="#lightbox4"><img src="image/artwork31.jpg" alt="Gallery Image 3"></a>
+            <a href="#lightbox4"><img src="image/artwork21.png" alt="Gallery Image 3"></a>
             <a href="#lightbox5"><img src="image/artwork33.jpg" alt="Gallery Image 4"></a>
-            <a href="#lightbox6"><video autoplay muted loop>
-                <source src="video/video08.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video></a>
             <a href="#lightbox8"><video autoplay muted loop>
                 <source src="video/video13.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video></a>
-
-
-
 
         </div>
 
@@ -263,7 +278,7 @@
         </div>
         <div id="lightbox4" class="lightbox">
             <span class="close">&times;</span>
-            <img src="image/artwork31.jpg" alt="Gallery Image 3">
+            <img src="image/artwork21.png" alt="Gallery Image 3">
         </div>
         <div id="lightbox5" class="lightbox">
             <span class="close">&times;</span>
@@ -271,10 +286,6 @@
         </div>
         <div id="lightbox6" class="lightbox">
             <span class="close">&times;</span>
-            <video controls autoplay loop>
-                <source src="video/video08.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
         </div>
         <div id="lightbox7" class="lightbox">
             <span class="close">&times;</span>
@@ -290,24 +301,20 @@
                 Your browser does not support the video tag.
             </video>
         </div>
-        <div id="lightbox9" class="lightbox">
-            <span class="close">&times;</span>
-            <img src="image/artwork25.jpg" alt="Gallery Image 4">
-        </div>
 
     </section>
 
     <section id="about">
         <h2>About Me</h2>
-        <p>I am a passionate Graphic Designer with over 4 years of experience. My work focuses on creating impactful designs for various industries, including real estate, cosmetics, services, retail, etc.</p>
+        <p>I am a passionate Graphic Designer with over 4 years of experience. My work focuses on creating impactful designs for various industries, including cosmetics and retail.</p>
     </section>
-
+<!--
     <section id="contact">
         <h2>Contact</h2>
         <p>Email: <a href="mailto:bchhunchhieng@gmail.com">bchhunchhieng@gmail.com</a></p>
         <p>Phone: 096 888 0907</p>
     </section>
-
+-->
     <footer>
         <p>&copy; 2025 Bun Chhunchhieng. All Rights Reserved.</p>
     </footer>
